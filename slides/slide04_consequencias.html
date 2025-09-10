@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As Consequências: Impactos Diretos e Indiretos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      box-sizing: border-box;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-title {
+      font-size: 44px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      flex: 1 1 45%;
+      min-height: 220px;
+      border-radius: 16px;
+      padding: 25px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .card-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .card-icon svg {
+        fill: currentColor;
+        opacity: 0.8;
+    }
+
+    .card-metric {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+    }
+    
+    .metric-description {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 4px 0 0 0;
+        opacity: 0.9;
+    }
+
+    .card-red { background: #e53e3e; }
+    .card-orange { background: #ed8936; }
+    .card-green { background: #38a169; }
+    .card-blue { background: #3182ce; }
+    
+    .footer {
+      width: 100%;
+      margin-top: 40px;
+      text-align: right;
+      font-size: 14px;
+      color: #718096;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1 class="main-title">As Consequências: Impactos Diretos e Indiretos</h1>
+    <div class="grid-container">
+      <div class="card card-red">
+        <div class="card-header">
+            <h2 class="card-title">Prejuízos Comerciais</h2>
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.5 16.5V18M13.5 16.5V18M10.5 6V7.5M13.5 6V7.5M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM9.1718 16.8282C9.87895 16.121 10.8787 15.7071 11.95 15.7071C13.0213 15.7071 14.0211 16.121 14.7282 16.8282M9.1718 7.1718C9.87895 7.87895 10.8787 8.29289 11.95 8.29289C13.0213 8.29289 14.0211 7.87895 14.7282 7.1718" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </div>
+        <div>
+            <p class="card-metric">R$ 1,2 milhão</p>
+            <p class="metric-description">por ano</p>
+        </div>
+      </div>
+      <div class="card card-orange">
+        <div class="card-header">
+            <h2 class="card-title">Acidentes</h2>
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V13M12 17H12.01M21.5 18L12.5 2.25C12.3375 1.94315 12.0125 1.75 11.6625 1.75C11.3125 1.75 10.9875 1.94315 10.825 2.25L1.5 18C1.3375 18.3068 1.3375 18.6932 1.5 19C1.6625 19.3068 1.9875 19.5 2.3375 19.5H20.6625C21.0125 19.5 21.3375 19.3068 21.5 19C21.6625 18.6932 21.6625 18.3068 21.5 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </div>
+        <div>
+            <p class="card-metric">+30%</p>
+            <p class="metric-description">em interseções críticas</p>
+        </div>
+      </div>
+      <div class="card card-green">
+        <div class="card-header">
+            <h2 class="card-title">Custos Ambientais</h2>
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.6633C12 21.6633 16 16.9657 16 12.5516C16 8.13753 12 3.33667 12 3.33667C12 3.33667 8 8.13753 8 12.5516C8 16.9657 12 21.6633 12 21.6633Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 11C14.5 12.3807 13.3807 13.5 12 13.5C10.6193 13.5 9.5 12.3807 9.5 11C9.5 9.61929 10.6193 8.5 12 8.5C12.913 8.5 13.7032 9.02271 14.1555 9.81186" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </div>
+        <div>
+            <p class="card-metric">R$ 500 mil</p>
+            <p class="metric-description">por ano</p>
+        </div>
+      </div>
+      <div class="card card-blue">
+        <div class="card-header">
+            <h2 class="card-title">Tempo Perdido</h2>
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </div>
+        <div>
+            <p class="card-metric">&gt;30 min</p>
+            <p class="metric-description">de espera média</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Fontes: Fecomércio-RS, 2023; CBM, 2023</p>
+    </div>
+  </div>
+</body>
+</html>

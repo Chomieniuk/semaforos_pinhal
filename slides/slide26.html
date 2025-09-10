@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viabilidade do Projeto: Um Modelo Financeiro Sustentável</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #1a365d;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .content {
+      display: flex;
+      flex-grow: 1;
+      margin-top: 40px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .left-panel {
+      flex: 0 0 45%;
+      padding-right: 40px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 28px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .bullet {
+      flex-shrink: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #63b3ed;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-top: 8px;
+    }
+
+    .feature-list strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .feature-list p {
+        margin: 0;
+        color: #e2e8f0;
+    }
+
+    .right-panel {
+      flex: 0 0 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    .diagram-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    .diagram-container {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .dashed-circle {
+        position: absolute;
+        width: 340px;
+        height: 340px;
+        border: 2px dashed #90b4d4;
+        border-radius: 50%;
+        opacity: 0.6;
+    }
+
+    .center-element {
+        width: 120px;
+        height: 120px;
+        background-color: #2c5282;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 10;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    
+    .center-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #f7b731;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .center-element p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .diagram-item {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        z-index: 5;
+    }
+    
+    .item-number {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #a0aec0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: #cbd5e0;
+        flex-shrink: 0;
+    }
+    
+    .item-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .item-text strong {
+        display: block;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 2px;
+    }
+
+    .item-text p {
+        margin: 0;
+        color: #e2e8f0;
+        font-size: 13px;
+    }
+
+    /* Positioning Items */
+    .item-1 { top: 0px; left: 380px; }
+    .item-2 { top: 110px; left: 450px; }
+    .item-3 { top: 250px; left: 430px; }
+    .item-4 { top: 350px; left: 200px; text-align: center; flex-direction: column; }
+    .item-5 { top: 180px; left: -30px; text-align: right; flex-direction: row-reverse;}
+    .item-6 { top: 50px; left: -10px; text-align: right; flex-direction: row-reverse;}
+
+    /* Spacing for item text */
+    .item-1 .item-text, .item-2 .item-text, .item-3 .item-text { margin-left: 10px; }
+    .item-4 .item-text { margin-top: 10px; }
+    .item-5 .item-text, .item-6 .item-text { margin-right: 10px; }
+
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="header">
+      <h1>Viabilidade do Projeto: <br>Um Modelo Financeiro Sustentável</h1>
+    </div>
+
+    <div class="content">
+      <div class="left-panel">
+        <ul class="feature-list">
+          <li>
+            <div class="bullet"></div>
+            <p><strong>Sustentabilidade a Longo Prazo:</strong> 70% de redução em custos operacionais e maior resiliência para o município.</p>
+          </li>
+          <li>
+            <div class="bullet"></div>
+            <p><strong>Aumento da Receita Municipal:</strong> Melhoria da atividade econômica local, gerando mais empregos e renda.</p>
+          </li>
+          <li>
+            <div class="bullet"></div>
+            <p><strong>Atração de Investimentos:</strong> Uma cidade moderna e eficiente atrai novos negócios e moradores qualificados.</p>
+          </li>
+          <li>
+            <div class="bullet"></div>
+            <p><strong>Ciclo Virtuoso:</strong> O crescimento econômico realimenta os investimentos em infraestrutura e serviços públicos.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-panel">
+        <div class="diagram-title">Círculo Virtuoso de Crescimento Sustentável</div>
+        <div class="diagram-container">
+            <div class="dashed-circle"></div>
+            <div class="center-element">
+                <div class="center-icon"></div>
+                <p>Crescimento</p>
+            </div>
+
+            <div class="diagram-item item-1">
+                <div class="item-number">01</div>
+                <div class="item-text">
+                    <strong>Adoção do Crescimento</strong>
+                    <p>Pessoas, Processos, Plataformas</p>
+                </div>
+            </div>
+            <div class="diagram-item item-2">
+                <div class="item-number">02</div>
+                <div class="item-text">
+                    <strong>Captação de Ideias</strong>
+                    <p>Novas fontes de renda e benefícios</p>
+                </div>
+            </div>
+            <div class="diagram-item item-3">
+                <div class="item-number">03</div>
+                <div class="item-text">
+                    <strong>Avaliação Contínua</strong>
+                    <p>Melhora a certeza e diminui riscos</p>
+                </div>
+            </div>
+             <div class="diagram-item item-4">
+                <div class="item-number">04</div>
+                <div class="item-text">
+                    <strong>Novas Oportunidades</strong>
+                    <p>Necessidades claras e melhorias</p>
+                </div>
+            </div>
+            <div class="diagram-item item-5">
+                <div class="item-number">05</div>
+                <div class="item-text">
+                    <strong>Desenvolvimento Proativo</strong>
+                    <p>Verificação e avaliação futura</p>
+                </div>
+            </div>
+            <div class="diagram-item item-6">
+                <div class="item-number">06</div>
+                <div class="item-text">
+                    <strong>Aceleração Financeira</strong>
+                    <p>Receitas, lucros e fluxo de caixa</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

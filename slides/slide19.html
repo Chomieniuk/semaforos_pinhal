@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos de Caso Comparativos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1a1a;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: radial-gradient(circle at 10% 20%, #293a9a, #1a237e 60%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .header {
+      padding: 40px 60px 20px 60px;
+      text-align: left;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .header p {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 5px 0 0 0;
+      color: #c0c0ff;
+    }
+
+    .content-area {
+      display: flex;
+      flex-grow: 1;
+      padding: 10px 60px 40px 60px;
+      gap: 40px;
+    }
+
+    .map-container {
+      flex: 0 0 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    .map-blob {
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+        border-radius: 48% 52% 69% 31% / 44% 41% 59% 56%;
+        position: absolute;
+    }
+
+    .map-point {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .map-point-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    .map-point-label {
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .curitiba { top: 35%; left: 55%; }
+    .curitiba .map-point-dot { background-color: #f39c12; }
+
+    .florianopolis { top: 50%; left: 65%; }
+    .florianopolis .map-point-dot { background-color: #3498db; }
+
+    .portoalegre { top: 65%; left: 40%; }
+    .portoalegre .map-point-dot { background-color: #2ecc71; }
+
+    .data-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .case-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 15px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-card h3 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: #e0e0ff;
+    }
+
+    .metrics {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .metric-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 180px;
+    }
+
+    .metric-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    .icon-filas { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 6h13'%3E%3C/path%3E%3Cpath d='M8 12h13'%3E%3C/path%3E%3Cpath d='M8 18h13'%3E%3C/path%3E%3Cpath d='M3 6h.01'%3E%3C/path%3E%3Cpath d='M3 12h.01'%3E%3C/path%3E%3Cpath d='M3 18h.01'%3E%3C/path%3E%3C/svg%3E"); }
+    .icon-acidentes { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'%3E%3C/path%3E%3Cpath d='M12 9v4'%3E%3C/path%3E%3Cpath d='M12 17h.01'%3E%3C/path%3E%3C/svg%3E"); }
+    .icon-onibus { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f39c12' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E"); }
+    .icon-roi { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f39c12' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E"); }
+    .icon-atropelamentos { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232ecc71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='9' cy='7' r='4'%3E%3C/circle%3E%3Cline x1='1' y1='1' x2='23' y2='23' stroke-width='3'%3E%3C/line%3E%3C/svg%3E"); }
+    .icon-combustivel { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232ecc71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 8a2 2 0 1 0-4 0c0 1.1.9 2 2 2 .62 0 1.17-.28 1.53-.73L16 12l-2.07-3.27a3.03 3.03 0 0 0-1.53-.73Z'%3E%3C/path%3E%3Cpath d='M14.27 10.73A4 4 0 1 1 8 8c0 1.1.45 2.1 1.17 2.83L12 15l2.83-4.17A4 4 0 0 1 14.27 10.73Z'%3E%3C/path%3E%3Cpath d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.4s-4.6-3.2-5.4-5C10.2 6.1 9 8 9 10a7 7 0 0 0 3 5.4Z'%3E%3C/path%3E%3C/svg%3E"); }
+    
+    .metric-value {
+        font-size: 44px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .metric-value.florianopolis-color { color: #87cefa; }
+    .metric-value.curitiba-color { color: #f8c471; }
+    .metric-value.portoalegre-color { color: #82e0aa; }
+    
+    .metric-label {
+        font-size: 15px;
+        font-weight: 400;
+        color: #d0d0ff;
+        margin-top: 4px;
+    }
+    .metric-label strong {
+        font-weight: 600;
+    }
+
+    .lessons-learned {
+      background: rgba(125, 102, 255, 0.2);
+      border-radius: 12px;
+      padding: 12px 25px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #eadaff;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1>Estudos de Caso Comparativos: Sucessos no Brasil</h1>
+      <p>Casos de sucesso comprovados em outras cidades brasileiras</p>
+    </div>
+
+    <div class="content-area">
+      <div class="map-container">
+        <div class="map-blob"></div>
+        <div class="map-point curitiba">
+            <div class="map-point-dot"></div>
+            <div class="map-point-label">Curitiba</div>
+        </div>
+        <div class="map-point florianopolis">
+            <div class="map-point-dot"></div>
+            <div class="map-point-label">Florianópolis</div>
+        </div>
+        <div class="map-point portoalegre">
+            <div class="map-point-dot"></div>
+            <div class="map-point-label">Porto Alegre</div>
+        </div>
+      </div>
+      <div class="data-container">
+        <div class="case-card">
+          <h3>Florianópolis / SC</h3>
+          <div class="metrics">
+            <div class="metric-item">
+              <div class="metric-icon icon-filas"></div>
+              <p class="metric-value florianopolis-color">60%</p>
+              <p class="metric-label">redução de filas</p>
+            </div>
+            <div class="metric-item">
+              <div class="metric-icon icon-acidentes"></div>
+              <p class="metric-value florianopolis-color">40%</p>
+              <p class="metric-label">menos acidentes</p>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <h3>Curitiba / PR</h3>
+          <div class="metrics">
+            <div class="metric-item">
+              <div class="metric-icon icon-onibus"></div>
+              <p class="metric-value curitiba-color">25%</p>
+              <p class="metric-label">menos tempo de ônibus</p>
+            </div>
+            <div class="metric-item">
+              <div class="metric-icon icon-roi"></div>
+              <p class="metric-value curitiba-color">3.2x</p>
+              <p class="metric-label">ROI em <strong>2 anos</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <h3>Porto Alegre / RS</h3>
+          <div class="metrics">
+            <div class="metric-item">
+              <div class="metric-icon icon-atropelamentos"></div>
+              <p class="metric-value portoalegre-color">50%</p>
+              <p class="metric-label">menos atropelamentos</p>
+            </div>
+            <div class="metric-item">
+              <div class="metric-icon icon-combustivel"></div>
+              <p class="metric-value portoalegre-color">20%</p>
+              <p class="metric-label">economia combustível</p>
+            </div>
+          </div>
+        </div>
+        <div class="lessons-learned">
+          <p><strong>Lições Aprendidas:</strong> Implementação gradual e envolvimento comunitário são chave.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>MiniMax Agent</span>
+      <span>Slide: 19</span>
+    </div>
+  </div>
+</body>
+</html>

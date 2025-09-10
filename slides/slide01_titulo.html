@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balneário Pinhal - Mobilidade Urbana</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: linear-gradient(135deg, #2d5a87 0%, #1a365d 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .background-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .shape-top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 250px 250px 0 0;
+        border-color: rgba(255, 255, 255, 0.05) transparent transparent transparent;
+        transform: rotate(180deg);
+    }
+
+    .shape-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 250px 250px 0 0;
+        border-color: rgba(255, 255, 255, 0.05) transparent transparent transparent;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    h1 {
+      font-size: 110px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.1;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtitle {
+      font-size: 32px;
+      font-weight: 400;
+      color: #f6d55c; /* Gold accent */
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+
+    .sigt-box {
+      margin-top: 40px;
+      padding: 12px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      font-size: 20px;
+      color: #e0e0e0;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .skyline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #152d4b;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 55%, 95% 55%, 95% 25%, 90% 25%, 90% 55%, 85% 55%, 85% 40%, 80% 40%, 80% 55%, 75% 55%, 75% 30%, 70% 30%, 70% 55%, 65% 55%, 65% 45%, 60% 45%, 60% 55%, 55% 55%, 55% 20%, 50% 20%, 50% 55%, 45% 55%, 45% 35%, 40% 35%, 40% 55%, 35% 55%, 35% 45%, 30% 45%, 30% 55%, 25% 55%, 25% 15%, 20% 15%, 20% 55%, 15% 55%, 15% 40%, 10% 40%, 10% 55%, 5% 55%, 5% 30%, 0% 30%);
+        z-index: 1;
+    }
+    
+    .footer {
+      position: absolute;
+      bottom: 40px; /* Increased margin from bottom */
+      right: 40px;  /* Increased margin from right */
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      z-index: 3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="background-shapes">
+      <div class="shape-top-left"></div>
+      <div class="shape-top-right"></div>
+    </div>
+
+    <div class="content">
+      <h1>Balneário Pinhal</h1>
+      <p class="subtitle">Rumo a uma Mobilidade Urbana Inteligente e Sustentável</p>
+      <div class="sigt-box">
+        <p>Sistema Inteligente de Gestão de Tráfego (SIGT)</p>
+      </div>
+    </div>
+    
+    <div class="skyline"></div>
+
+    <p class="footer">Prefeitura Municipal de Balneário Pinhal</p>
+  </div>
+
+</body>
+</html>

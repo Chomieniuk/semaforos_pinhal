@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balneário Pinhal: Demanda Sazonal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-panel {
+            flex: 0 0 45%;
+            background: radial-gradient(circle, #3a75ad, #2d5a87);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .season-icons {
+            font-size: 48px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .percentage-display {
+            font-size: 160px;
+            font-weight: 900;
+            color: #ed8936;
+            line-height: 1;
+            margin: 10px 0;
+            animation: scale-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            transform-origin: center;
+        }
+
+        @keyframes scale-up {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .left-panel-subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+
+        .right-panel {
+            flex: 1;
+            padding: 60px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right-panel h1 {
+            font-size: 42px;
+            color: #2d5a87;
+            font-weight: 900;
+            margin: 0 0 40px 0;
+            line-height: 1.2;
+        }
+
+        .stats-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .stats-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .stats-icon {
+            font-size: 40px;
+            color: #2d5a87;
+            margin-right: 20px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .stats-text {
+            font-size: 22px;
+            color: #2d3748;
+            font-weight: 400;
+            margin: 0;
+        }
+        
+        .stats-text strong {
+            font-weight: 700;
+            color: #ed8936;
+        }
+
+        .source-citation {
+            font-size: 14px;
+            color: #718096;
+            align-self: flex-start;
+            margin-top: 20px;
+        }
+        
+        .road-diagram-container {
+            width: 100%;
+            height: 150px;
+            position: relative;
+            margin-top: auto;
+        }
+
+        .road {
+            position: absolute;
+            background-color: #cbd5e0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .road-horizontal {
+            width: 100%;
+            height: 25px;
+            left: 0;
+            top: 60px;
+            background: linear-gradient(to right, #a0aec0 40%, #ed8936 70%, #f56565 100%);
+        }
+        
+        .road-vertical {
+            width: 25px;
+            height: 150px;
+            left: 70%;
+            top: 0;
+            background: linear-gradient(to bottom, #a0aec0 40%, #ed8936 60%, #f56565 90%);
+        }
+        
+        .road-label {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            color: #4a5568;
+        }
+        
+        .label-h {
+            top: 30px;
+            left: 5px;
+        }
+        
+        .label-v {
+            top: -20px;
+            left: 68%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="left-panel">
+            <div class="season-icons">❄️ ➜ ☀️</div>
+            <div class="left-panel-subtitle">Aumento Populacional Sazonal</div>
+            <div class="percentage-display">+300%</div>
+            <div class="left-panel-subtitle">na alta temporada</div>
+        </div>
+        <div class="right-panel">
+            <div>
+                <h1>Balneário Pinhal: Um Município de Demanda Sazonal Extrema</h1>
+                <ul class="stats-list">
+                    <li class="stats-item">
+                        <div class="stats-icon">🚗</div>
+                        <p class="stats-text"><strong>RS-040 e RS-786:</strong> Principais vias de acesso congestionadas</p>
+                    </li>
+                    <li class="stats-item">
+                        <div class="stats-icon">📈</div>
+                        <p class="stats-text">Fluxo de veículos aumentou <strong>+45%</strong> nos últimos 5 anos</p>
+                    </li>
+                    <li class="stats-item">
+                        <div class="stats-icon">🕒</div>
+                        <p class="stats-text">Tempo de viagem Palmares do Sul ↔ Pinhal <strong>3x maior</strong> no pico</p>
+                    </li>
+                </ul>
+                <p class="source-citation">Fonte: DETRAN-RS, Análise de Fluxo, 2023</p>
+            </div>
+            <div class="road-diagram-container">
+                <div class="road-label label-h">RS-040</div>
+                <div class="road-label label-v">RS-786</div>
+                <div class="road road-horizontal"></div>
+                <div class="road road-vertical"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

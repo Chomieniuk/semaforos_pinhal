@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação de Viabilidade, Investimento e Cronograma</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f2f5;
+      font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+      animation: fadeInAnimation 1s ease-in-out;
+    }
+
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .image-container {
+      flex-basis: 48%;
+      flex-shrink: 0;
+      height: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 60px;
+      box-sizing: border-box;
+    }
+
+    .content-container h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: #1a365d;
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+
+    .content-container .subtitle {
+      font-size: 20px;
+      color: #4a5568;
+      margin: 0 0 32px 0;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    
+    .divider {
+        width: 60px;
+        height: 5px;
+        background-color: #1a365d;
+        margin-bottom: 32px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      background-color: #1a365d;
+      margin-right: 16px;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .feature-list li p {
+      margin: 0;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="image-container">
+      <img src="images/slide1_intro.jpg" alt="Gráficos de finanças e dados da empresa">
+    </div>
+    <div class="content-container">
+      <h1>Parte 3: Viabilidade, Investimento e Cronograma</h1>
+      <p class="subtitle">Análise financeira detalhada, plano de implementação e gestão proativa de riscos para o sucesso do projeto.</p>
+      <div class="divider"></div>
+      <ul class="feature-list">
+        <li>
+          <div class="bullet"></div>
+          <p>Análise de investimento e retorno (ROI e Payback)</p>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <p>Fontes de financiamento potenciais</p>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <p>Cronograma de implementação em fases</p>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <p>Estratégias de mitigação de riscos</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

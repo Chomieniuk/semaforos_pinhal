@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benefícios Sociais</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      width: 1280px;
+      height: 720px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1A237E;
+      background-image: linear-gradient(rgba(26, 35, 126, 0.85), rgba(40, 53, 147, 0.95)), url('images/smart_city_urban_mobility_planning_infographic_background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 40px 80px 30px 80px;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      width: 100%;
+      flex-grow: 1;
+      margin-top: 30px;
+      min-height: 0; /* Prevents grid from overflowing flex container */
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .card-background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65%;
+        opacity: 0.06;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 15px;
+    }
+
+    .card-icon svg {
+        fill: #69F0AE;
+    }
+
+    .percentage {
+      font-size: 60px;
+      font-weight: 700;
+      color: #69F0AE;
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 10px 0 5px 0;
+    }
+
+    .card p {
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0.85;
+      margin: 0;
+      line-height: 1.4;
+      max-width: 90%;
+    }
+
+    footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: auto; /* Pushes footer to the bottom of the flex container */
+      padding-top: 20px; /* Ensures space from grid above */
+    }
+    
+    .footer-left, .footer-right {
+        opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Benefícios Sociais: Melhor Qualidade de Vida para Todos</h1>
+    <p class="subtitle">Impacto direto no bem-estar e segurança dos moradores de Balneário Pinhal</p>
+  </header>
+
+  <div class="grid-container">
+    <!-- Card 1: Redução Tempo de Viagem -->
+    <div class="card">
+      <div class="card-background">
+        <svg viewBox="0 0 200 100" preserveAspectRatio="none"><path d="M0,100 L0,85 C20,80 40,90 60,85 C80,80 100,70 120,75 C140,80 160,95 180,92 C200,90 200,100 200,100 Z" fill="white"></path><path d="M0,100 L0,70 C15,75 30,65 45,68 C60,71 75,80 90,78 C105,76 120,60 135,65 C150,70 165,85 180,80 C195,75 200,85 200,85 L200,100 Z" fill="white"></path></svg>
+      </div>
+      <div class="card-content">
+        <div class="card-icon">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S15.589,20,12,20z M12.5,7H11v6l5.25,3.15l0.75-1.23L12.5,12.2V7z"></path></svg>
+        </div>
+        <strong class="percentage">30%</strong>
+        <h3>Redução Tempo de Viagem</h3>
+        <p>Menos estresse, mais tempo com a família</p>
+      </div>
+    </div>
+    
+    <!-- Card 2: Diminuição Acidentes -->
+    <div class="card">
+       <div class="card-background">
+        <svg viewBox="0 0 200 100" preserveAspectRatio="none"><path d="M0 100 V 80 H 15 V 60 H 30 V 80 H 40 V 50 H 55 V 80 H 65 V 70 H 80 V 80 H 90 V 40 H 110 V 80 H 120 V 65 H 135 V 80 H 145 V 75 H 160 V 80 H 175 V 55 H 190 V 80 H 200 V 100 Z" fill="white"></path></svg>
+      </div>
+      <div class="card-content">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2L3,5v6c0,5.55,3.84,10.74,9,12c5.16-1.26,9-6.45,9-12V5L12,2z M19,11c0,4.12-2.75,8.12-7,9.37 C7.75,19.12,5,15.12,5,11V6.3l7-3.11V11z"></path></svg>
+        </div>
+        <strong class="percentage">40%</strong>
+        <h3>Diminuição Acidentes</h3>
+        <p>Vias mais seguras para todos os usuários</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Aumento da Segurança Urbana -->
+    <div class="card">
+      <div class="card-background">
+        <svg viewBox="0 0 200 100" preserveAspectRatio="none"><path d="M0 100 V 80 H 10 V 70 H 20 V 80 H 30 V 60 H 40 V 80 H 50 V 50 H 60 V 80 H 70 V 70 H 80 V 80 H 120 V 75 H 130 V 80 H 140 V 65 H 150 V 80 H 160 V 55 H 170 V 80 H 180 V 70 H 190 V 80 H 200 V 100 Z" fill="white"></path></svg>
+      </div>
+      <div class="card-content">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18,8h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V10 C20,8.9,19.1,8,18,8z M9,6c0-1.66,1.34-3,3-3s3,1.34,3,3v2H9V6z M12,17c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S13.1,17,12,17z"></path></svg>
+        </div>
+        <h3>Aumento da Segurança Urbana</h3>
+        <p>Monitoramento inteligente 24/7</p>
+      </div>
+    </div>
+    
+    <!-- Card 4: Criação de Empregos Técnicos -->
+    <div class="card">
+      <div class="card-background">
+        <svg viewBox="0 0 200 100" preserveAspectRatio="none"><path d="M0 100 V 90 H 20 V 70 H 40 V 90 H 55 V 60 H 70 V 90 H 80 V 50 H 95 V 90 H 110 V 80 H 125 V 90 H 140 V 70 H 160 V 90 H 175 V 60 H 190 V 90 H 200 V 100 Z" fill="white"></path></svg>
+      </div>
+      <div class="card-content">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,6h-8l-2-2H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V8C22,6.9,21.1,6,20,6z M20,18H4V6h5.17 l2,2H20V18z"></path></svg>
+        </div>
+        <h3>Criação de Empregos Técnicos</h3>
+        <p>Oportunidades em tecnologia e inovação</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">MiniMax Agent</div>
+    <div class="footer-right">Slide: 16</div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métrica Financeira Chave: Payback do Investimento</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .left-panel {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .right-panel {
+      flex: 1;
+      background-color: #1a365d;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
+    .title {
+      color: #4a5568;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+    .calculation-box {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .calculation-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4a5568;
+      margin-bottom: 15px;
+    }
+    .formula {
+      font-size: 18px;
+      color: #4a5568;
+    }
+    .formula-line {
+      width: 250px;
+      height: 2px;
+      background-color: #4a5568;
+      margin: 10px auto;
+    }
+    .value-card {
+      background-color: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .value-label {
+      font-size: 18px;
+      color: #4a5568;
+      font-weight: 400;
+    }
+    .value-amount {
+      font-size: 22px;
+      color: #1a365d;
+      font-weight: 700;
+    }
+    .result-title {
+      font-size: 22px;
+      font-weight: 400;
+      opacity: 0.8;
+      margin: 0;
+    }
+    .result-number {
+      font-size: 170px;
+      font-weight: 900;
+      line-height: 1;
+      margin: 10px 0;
+      letter-spacing: -5px;
+    }
+    .result-subtitle {
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0;
+      opacity: 0.9;
+    }
+    .image-container {
+      margin-top: 40px;
+      width: 90%;
+      transform: perspective(1500px) rotateY(-8deg) rotateX(2deg);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .image-container:hover {
+        transform: perspective(1500px) rotateY(0deg) rotateX(0deg);
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="left-panel">
+      <h1 class="title">Métrica Financeira Chave:<br>Payback do Investimento</h1>
+      
+      <div class="calculation-box">
+        <p class="calculation-title">Cálculo do Payback Simples</p>
+        <div class="formula">
+          <p style="margin:0;">Custo Total</p>
+          <div class="formula-line"></div>
+          <p style="margin:0;">Benefícios Anuais Totais</p>
+        </div>
+      </div>
+
+      <div class="value-card">
+        <p class="value-label">Custo Total:</p>
+        <p class="value-amount">R$ 7.982.035,00</p>
+      </div>
+
+      <div class="value-card">
+        <p class="value-label">Benefícios Anuais Totais:</p>
+        <p class="value-amount">R$ 3.815.000,00</p>
+      </div>
+    </div>
+    <div class="right-panel">
+      <p class="result-title">Retorno do Investimento em</p>
+      <div class="result-number">2,09</div>
+      <p class="result-subtitle">anos (2 anos e 1 mês)</p>
+      <div class="image-container">
+        <img src="images/slide4_payback.jpg" alt="Gráfico de Payback do Investimento">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

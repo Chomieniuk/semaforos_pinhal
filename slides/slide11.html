@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parte 2: O Coração Tecnológico</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-image: linear-gradient(rgba(26, 35, 126, 0.92), rgba(26, 35, 126, 0.98)), url('images/smart_city_aerial_view_network_technology_render.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px 80px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .part-number {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 200px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      z-index: 1;
+    }
+
+    .header {
+      text-align: left;
+      z-index: 2;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+      max-width: 90%;
+    }
+
+    .header p {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0;
+      opacity: 0.85;
+      max-width: 85%;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 900px;
+      margin: 20px auto;
+      z-index: 2;
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      animation: fadeIn 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-8px);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .grid-item svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      fill: #ffffff;
+      opacity: 0.8;
+    }
+
+    .grid-item p {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 10px 0 0 0;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="part-number">2</div>
+
+    <header class="header">
+      <h1>Parte 2: O Coração Tecnológico e Seus Impactos</h1>
+      <p>Detalhamento das Tecnologias e Impactos Positivos Diretos para Balneário Pinhal</p>
+    </header>
+
+    <main class="grid-container">
+      <div class="grid-item" style="animation-delay: 0.3s;">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+        <p>Revisão da visão geral</p>
+      </div>
+      <div class="grid-item" style="animation-delay: 0.5s;">
+        <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v.01l9 9-7 6.99z"></path><circle cx="6.5" cy="6.5" r="1.5"></circle></svg>
+        <p>Aprofundamento tecnológico</p>
+      </div>
+      <div class="grid-item" style="animation-delay: 0.7s;">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 12.17l7.59-7.59L19 6l-9 9z"></path></svg>
+        <p>Benefícios sociais e ambientais</p>
+      </div>
+      <div class="grid-item" style="animation-delay: 0.9s;">
+        <svg viewBox="0 0 24 24"><path d="M16 11V3H8v6H2v12h20V11h-6zm-6-6h4v4h-4V5zm10 14H4v-8h16v8z"></path><path d="M10 15H8v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"></path></svg>
+        <p>Casos de sucesso nacionais</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>MiniMax Agent</p>
+      <p>11</p>
+    </footer>
+  </div>
+</body>
+</html>

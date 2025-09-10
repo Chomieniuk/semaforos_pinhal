@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .title {
+      font-size: 38px;
+      color: #1a202c;
+      font-weight: 700;
+      text-align: center;
+      padding: 60px 40px 0 40px;
+      margin: 0;
+    }
+
+    .content-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      gap: 70px;
+    }
+
+    .top-row, .bottom-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    .bottom-row {
+        justify-content: space-between;
+    }
+
+    .component {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 280px;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 15px 3px rgba(11, 197, 234, 0.3), 0 0 5px 1px rgba(49, 130, 206, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 25px 8px rgba(11, 197, 234, 0.5), 0 0 8px 3px rgba(49, 130, 206, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 15px 3px rgba(11, 197, 234, 0.3), 0 0 5px 1px rgba(49, 130, 206, 0.4);
+      }
+    }
+
+    .icon-wrapper {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    
+    .component:nth-child(2) .icon-wrapper { animation-delay: 0.5s; }
+    .component:nth-child(3) .icon-wrapper { animation-delay: 1s; }
+
+
+    .icon-circle {
+      width: 84px;
+      height: 84px;
+      border: 2px solid #3182CE;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+    
+    .icon-svg {
+      width: 44px;
+      height: 44px;
+      fill: #2d3748;
+    }
+
+    .component-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #3182CE;
+      margin: 0 0 8px 0;
+    }
+
+    .component-description {
+      font-size: 16px;
+      color: #4a5568;
+      line-height: 1.5;
+      margin: 0;
+      max-width: 240px;
+    }
+    
+    .central-hub .icon-circle {
+        background-color: #3182CE;
+    }
+    
+    .central-hub .icon-svg {
+        fill: #ffffff;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1 class="title">A Solução: Sistema Inteligente de Gestão de Tráfego (SIGT)</h1>
+    <div class="content-container">
+      <div class="top-row">
+        <div class="component">
+          <div class="icon-wrapper">
+            <div class="icon-circle">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 6.89543 4.89543 6 6 6H18C19.1046 6 20 6.89543 20 8V16C20 17.1046 19.1046 18 18 18H6C4.89543 18 4 17.1046 4 16V8Z" stroke-width="2" stroke="#2d3748" fill="none"></path><circle cx="12" cy="12" r="3" stroke-width="2" stroke="#2d3748" fill="none"></circle></svg>
+            </div>
+          </div>
+          <h3 class="component-title">Câmeras com IA</h3>
+          <p class="component-description">Monitoramento proativo e análise preditiva</p>
+        </div>
+      </div>
+      <div class="bottom-row">
+        <div class="component">
+          <div class="icon-wrapper">
+            <div class="icon-circle">
+              <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="4" width="12" height="16" rx="2" stroke="#2d3748" stroke-width="1.5" fill="none"/>
+                <circle cx="12" cy="8" r="1.5" fill="#2d3748"/>
+                <circle cx="12" cy="12" r="1.5" fill="#2d3748"/>
+                <circle cx="12" cy="16" r="1.5" fill="#2d3748"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="component-title">Semáforos Inteligentes</h3>
+          <p class="component-description">Ajustam ciclos em tempo real</p>
+        </div>
+        <div class="component central-hub">
+          <div class="icon-wrapper">
+            <div class="icon-circle">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 5L5 5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z M8 13H6V11H8V13Z M8 9H6V7H8V9Z M13 13H11V11H13V13Z M13 9H11V7H13V9Z M18 13H16V11H18V13Z M18 9H16V7H18V9Z"/>
+                </svg>
+            </div>
+          </div>
+          <h3 class="component-title">Plataforma Central</h3>
+          <p class="component-description">Núcleo que processa dados e coordena tecnologias</p>
+        </div>
+        <div class="component">
+          <div class="icon-wrapper">
+            <div class="icon-circle">
+               <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="5" width="16" height="14" rx="2" stroke="#2d3748" stroke-width="1.5" fill="none"/>
+                <line x1="8" y1="9" x2="16" y2="9" stroke="#2d3748" stroke-width="1.5"/>
+                <line x1="8" y1="12" x2="16" y2="12" stroke="#2d3748" stroke-width="1.5"/>
+                <line x1="8" y1="15" x2="13" y2="15" stroke="#2d3748" stroke-width="1.5"/>
+               </svg>
+            </div>
+          </div>
+          <h3 class="component-title">Placas LED Inteligentes</h3>
+          <p class="component-description">Comunicação dinâmica com motoristas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

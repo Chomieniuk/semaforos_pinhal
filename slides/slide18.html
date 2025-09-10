@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 18: Sustentabilidade Ambiental</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #101010;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      position: relative;
+      background: linear-gradient(135deg, #1a237e, #2e7d32);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+    }
+
+    .background-image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .background-image {
+      background-image: url('images/smart_city_aerial_view_network_technology_render.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(50%);
+      opacity: 0.2;
+    }
+
+    .background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(16, 34, 78, 0.3);
+    }
+    
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: 50px 70px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: left;
+      border-left: 5px solid #69f0ae;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .header p {
+      font-size: 20px;
+      font-weight: 300;
+      margin: 5px 0 0 0;
+      opacity: 0.9;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      gap: 40px;
+      margin-top: 25px;
+    }
+
+    .left-column {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right-column {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    .indicator-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .indicator-item:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .indicator-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    
+    .icon-co2 { background-color: #ef5350; }
+    .icon-fuel { background-color: #ff9800; }
+    .icon-energy { background-color: #ffee58; color: #333; }
+    .icon-noise { background-color: #42a5f5; }
+
+    .indicator-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .indicator-text strong {
+      font-size: 18px;
+      font-weight: 600;
+      color: #b9f6ca;
+    }
+
+    .indicator-text small {
+      display: block;
+      font-weight: 300;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .chart-container {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .chart-container h3 {
+      text-align: center;
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+    
+    .bar-chart {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      height: 120px;
+      align-items: flex-end;
+    }
+
+    .bar-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .bar {
+      width: 70px;
+      border-radius: 6px 6px 0 0;
+      position: relative;
+      animation: growBar 1s ease-out forwards;
+    }
+
+    .bar-before {
+      height: 100%;
+      background: linear-gradient(to top, #d32f2f, #ef5350);
+    }
+
+    .bar-after {
+      height: 88%;
+      background: linear-gradient(to top, #388e3c, #66bb6a);
+    }
+    
+    .bar-label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .bar-value {
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 16px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+    
+    @keyframes growBar {
+      from { transform: scaleY(0); transform-origin: bottom; }
+      to { transform: scaleY(1); transform-origin: bottom; }
+    }
+
+    .ods-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .ods-item {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ods-item strong {
+      font-size: 36px;
+    }
+
+    .ods-item small {
+      font-size: 10px;
+      line-height: 1.2;
+      padding: 0 5px;
+    }
+
+    .ods-3 { background-color: #4C9F38; }
+    .ods-11 { background-color: #FD9D24; }
+    .ods-13 { background-color: #3F7E44; }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 300;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="background-image-container">
+      <div class="background-image"></div>
+      <div class="background-overlay"></div>
+    </div>
+    <div class="content-wrapper">
+      <div class="header">
+        <h1>Sustentabilidade Ambiental: Um Compromisso com o Futuro</h1>
+        <p>Contribuição direta para proteção ambiental e alinhamento com ODS da ONU</p>
+      </div>
+
+      <div class="main-content">
+        <div class="left-column">
+          <div class="indicator-item">
+            <div class="indicator-icon icon-co2">CO₂</div>
+            <div class="indicator-text">
+              <strong>Redução 12% CO₂:</strong> 2.500 toneladas/ano
+              <small>Equivale a plantar 125.000 árvores</small>
+            </div>
+          </div>
+          <div class="indicator-item">
+            <div class="indicator-icon icon-fuel">⛽</div>
+            <div class="indicator-text">
+              <strong>Economia 15% Combustível:</strong> 500 mil litros/ano
+              <small>Menos dependência de combustíveis fósseis</small>
+            </div>
+          </div>
+          <div class="indicator-item">
+            <div class="indicator-icon icon-energy">☀️</div>
+            <div class="indicator-text">
+              <strong>Energia Limpa</strong>
+              <small>Painéis solares alimentando dispositivos inteligentes</small>
+            </div>
+          </div>
+          <div class="indicator-item">
+            <div class="indicator-icon icon-noise">🔉</div>
+            <div class="indicator-text">
+              <strong>Redução 20% Ruído Urbano</strong>
+              <small>Trânsito fluido para um ambiente mais tranquilo</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="chart-container">
+            <h3>Comparativo de Emissões de CO₂</h3>
+            <div class="bar-chart">
+              <div class="bar-group">
+                <div class="bar bar-before">
+                    <div class="bar-value">-0%</div>
+                </div>
+                <div class="bar-label">ANTES</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar bar-after">
+                    <div class="bar-value">-12%</div>
+                </div>
+                <div class="bar-label">DEPOIS</div>
+              </div>
+            </div>
+          </div>
+          <div class="ods-container">
+            <div class="ods-item ods-3">
+              <strong>3</strong>
+              <small>SAÚDE E BEM-ESTAR</small>
+            </div>
+            <div class="ods-item ods-11">
+              <strong>11</strong>
+              <small>CIDADES SUSTENTÁVEIS</small>
+            </div>
+            <div class="ods-item ods-13">
+              <strong>13</strong>
+              <small>AÇÃO CLIMÁTICA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>MiniMax Agent</p>
+        <p>Slide: 18</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

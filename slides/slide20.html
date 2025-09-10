@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 20: Próximos Passos (Parte 2)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a237e;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 70px;
+      color: #ffffff;
+      background:
+        linear-gradient(135deg, rgba(26, 35, 126, 0.95) 0%, rgba(20, 28, 100, 0.85) 60%, rgba(10, 15, 60, 0.98) 100%),
+        url('images/aerial_view_smart_city_traffic_management_system.jpg') no-repeat center center;
+      background-size: cover;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .header {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #00b0ff;
+      display: inline-block;
+      animation: slideInDown 0.8s forwards;
+    }
+
+    .header p {
+      font-size: 22px;
+      font-weight: 300;
+      margin: 10px 0 0 0;
+      opacity: 0.9;
+      animation: slideInDown 0.8s forwards 0.2s;
+      animation-fill-mode: backwards;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .roadmap-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      width: 65%;
+    }
+    
+    .roadmap-item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-left: 5px solid transparent;
+      transition: all 0.3s ease;
+      animation: slideInLeft 0.8s forwards;
+    }
+    
+    .roadmap-item:nth-child(1) { border-left-color: #00b0ff; animation-delay: 0.4s; animation-fill-mode: backwards;}
+    .roadmap-item:nth-child(2) { border-left-color: #00e676; animation-delay: 0.6s; animation-fill-mode: backwards;}
+    .roadmap-item:nth-child(3) { border-left-color: #ffc400; animation-delay: 0.8s; animation-fill-mode: backwards;}
+    .roadmap-item:nth-child(4) { border-left-color: #ff4081; background-color: rgba(255, 255, 255, 0.12); animation-delay: 1.0s; animation-fill-mode: backwards;}
+
+    .roadmap-item:hover {
+      transform: translateX(10px);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+    
+    .roadmap-icon {
+      flex-shrink: 0;
+      margin-right: 20px;
+      width: 50px;
+      height: 50px;
+    }
+    
+    .roadmap-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .roadmap-text strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    
+    .roadmap-text p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+    
+    .next-step-container {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .arrow-svg {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: -90px;
+      opacity: 0.7;
+      animation: pulseArrow 2s infinite, slideInLeft 1s forwards 1.2s;
+      animation-fill-mode: backwards;
+    }
+    
+    @keyframes pulseArrow {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .next-step-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      animation: popIn 1s forwards 1.4s;
+      animation-fill-mode: backwards;
+    }
+
+    .next-step-number {
+      font-size: 250px;
+      font-weight: 700;
+      color: #00b0ff;
+      line-height: 1;
+      opacity: 0.3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    
+    .next-step-title {
+      font-size: 40px;
+      font-weight: 700;
+      color: #ffffff;
+      z-index: 2;
+      background: rgba(26, 35, 126, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .footer {
+      width: 1140px; /* 1280 - 2*70 */
+      position: absolute;
+      bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      animation: fadeIn 1s forwards 1.5s;
+      animation-fill-mode: backwards;
+    }
+
+    @keyframes slideInDown {
+        from { transform: translateY(-30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideInLeft {
+        from { transform: translateX(-30px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes popIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1>Próximos Passos (Parte 2): O Caminho para a Realização</h1>
+      <p>Compreensão das tecnologias completa - hora de planejar a concretização</p>
+    </div>
+
+    <div class="main-content">
+      <div class="roadmap-container">
+        <div class="roadmap-item">
+          <div class="roadmap-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#00b0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.4 15L21.54 16.5C21.83 16.71 22 17.05 22 17.41V19C22 20.1 21.1 21 20 21H15.5C15.19 21 14.89 20.89 14.67 20.67L13.5 19.5M4.6 9L2.46 7.5C2.17 7.29 2 6.95 2 6.59V5C2 3.9 2.9 3 4 3H8.5C8.81 3 9.11 3.11 9.33 3.33L10.5 4.5M19.4 9L21.54 7.5C21.83 7.29 22 6.95 22 6.59V5C22 3.9 21.1 3 20 3H15.5C15.19 3 14.89 3.11 14.67 3.33L13.5 4.5M4.6 15L2.46 16.5C2.17 16.71 2 17.05 2 17.41V19C2 20.1 2.9 21 4 21H8.5C8.81 21 9.11 20.89 9.33 20.67L10.5 19.5" stroke="#00b0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="roadmap-text">
+            <strong>Solução Tecnológica</strong>
+            <p>Baseada em tecnologias de ponta já comprovadas.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 20V10M12 20V4M17 20V14" stroke="#00e676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="roadmap-text">
+            <strong>Casos Nacionais de Sucesso</strong>
+            <p>Resultados expressivos em cidades similares.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#ffc400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12C15 14.0714 13.75 15.7857 12 16.5C10.25 15.7857 9 14.0714 9 12C9 9.92857 10.25 8.21429 12 7.5C13.75 8.21429 15 9.92857 15 12Z" stroke="#ffc400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9H20.5M3.5 15H20.5" stroke="#ffc400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="roadmap-text">
+            <strong>Benefícios Sociais/Ambientais</strong>
+            <p>Impactos positivos mensurados e significativos.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V6C19 4.34315 17.6569 3 16 3Z" stroke="#ff4081" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7H15M9 11H15M9 15H13" stroke="#ff4081" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="roadmap-text">
+            <strong>Próximo Passo</strong>
+            <p>Viabilidade financeira, cronograma e gestão de riscos (Parte 3).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="next-step-container">
+        <svg class="arrow-svg" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30H90" stroke="url(#arrowGradient)" stroke-width="6"/>
+          <path d="M70 10L95 30L70 50" stroke="url(#arrowGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="arrowGradient" x1="0" y1="30" x2="95" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ff4081" stop-opacity="0.2"/>
+              <stop offset="1" stop-color="#00b0ff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="next-step-box">
+          <div class="next-step-number">3</div>
+          <div class="next-step-title">Parte 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>MiniMax Agent</div>
+      <div>Slide: 20</div>
+    </div>
+  </div>
+</body>
+</html>

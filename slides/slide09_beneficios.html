@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benefícios Projetados: Uma Cidade Transformada</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f4f8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      box-sizing: border-box;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 44px;
+      font-weight: 700;
+      color: #1a202c;
+      text-align: center;
+      margin: 0 0 50px 0;
+    }
+
+    .benefits-grid {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 25px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .benefit-card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1 1 280px;
+      min-width: 280px;
+      max-width: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 5px solid transparent;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-color-1 { border-color: #3182ce; }
+    .card-color-2 { border-color: #3182ce; }
+    .card-color-3 { border-color: #48bb78; }
+    .card-color-4 { border-color: #38a169; }
+    .card-color-5 { border-color: #48bb78; }
+
+    .icon-container {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .value-display {
+      font-size: 56px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+    }
+    
+    .text-value {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .description {
+      font-size: 17px;
+      color: #4a5568;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Icon Styles */
+    
+    /* 1. Traffic Icon */
+    .icon-traffic-arrow {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 20px solid #3182ce;
+    }
+    .icon-traffic-road {
+        width: 8px;
+        height: 30px;
+        background-color: #3182ce;
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* 2. Safety Icon */
+    .icon-safety-shield {
+        width: 54px;
+        height: 60px;
+        background-color: #3182ce;
+        border-radius: 27px 27px 0 0;
+        position: relative;
+    }
+    .icon-safety-shield-point {
+        width: 0;
+        height: 0;
+        border-left: 27px solid transparent;
+        border-right: 27px solid transparent;
+        border-top: 20px solid #3182ce;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+    }
+    
+    /* 3. Clock Icon */
+    .icon-clock-face {
+        width: 60px;
+        height: 60px;
+        border: 5px solid #48bb78;
+        border-radius: 50%;
+        position: relative;
+    }
+    .icon-clock-hand-hour {
+        width: 4px;
+        height: 20px;
+        background-color: #48bb78;
+        position: absolute;
+        top: 10px;
+        left: 28px;
+        transform-origin: bottom center;
+    }
+    .icon-clock-hand-minute {
+        width: 4px;
+        height: 25px;
+        background-color: #48bb78;
+        position: absolute;
+        top: 5px;
+        left: 28px;
+        transform-origin: bottom center;
+        transform: rotate(90deg);
+    }
+    
+    /* 4. Leaf Icon */
+    .icon-leaf {
+        width: 50px;
+        height: 50px;
+        background-color: #38a169;
+        border-radius: 0 80%;
+        transform: rotate(45deg);
+    }
+    .icon-leaf-text {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        transform: rotate(-45deg);
+    }
+
+    /* 5. Sound Icon */
+    .icon-sound-wave {
+        width: 10px;
+        background-color: #48bb78;
+        border-radius: 5px;
+        margin: 0 3px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="header">
+      <h1>Benefícios Projetados: Uma Cidade Transformada</h1>
+    </div>
+
+    <div class="benefits-grid">
+      
+      <div class="benefit-card card-color-1">
+        <div class="icon-container">
+            <div class="icon-traffic-road"></div>
+            <div class="icon-traffic-arrow"></div>
+        </div>
+        <div class="value-display" style="color: #3182ce;">50%</div>
+        <p class="description">Redução nos Congestionamentos</p>
+      </div>
+
+      <div class="benefit-card card-color-2">
+        <div class="icon-container">
+            <div class="icon-safety-shield">
+                <div class="icon-safety-shield-point"></div>
+            </div>
+        </div>
+        <div class="value-display" style="color: #3182ce;">40%</div>
+        <p class="description">Diminuição de Acidentes</p>
+      </div>
+
+      <div class="benefit-card card-color-3">
+        <div class="icon-container">
+          <div class="icon-clock-face">
+            <div class="icon-clock-hand-hour"></div>
+            <div class="icon-clock-hand-minute"></div>
+          </div>
+        </div>
+        <div class="value-display text-value" style="color: #48bb78;">Otimização Significativa</div>
+        <p class="description">Nos Tempos de Viagem</p>
+      </div>
+
+      <div class="benefit-card card-color-4">
+        <div class="icon-container">
+          <div class="icon-leaf">
+             <div class="icon-leaf-text">CO₂</div>
+          </div>
+        </div>
+        <div class="value-display" style="color: #38a169;">15%</div>
+        <p class="description">Redução de Emissões</p>
+      </div>
+
+      <div class="benefit-card card-color-5">
+        <div class="icon-container" style="align-items: flex-end;">
+            <div class="icon-sound-wave" style="height: 25%;"></div>
+            <div class="icon-sound-wave" style="height: 50%;"></div>
+            <div class="icon-sound-wave" style="height: 75%;"></div>
+            <div class="icon-sound-wave" style="height: 40%;"></div>
+        </div>
+        <div class="value-display text-value" style="color: #48bb78;">Diminuição</div>
+        <p class="description">Do Ruído Urbano</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

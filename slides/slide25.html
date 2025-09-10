@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPT Slide: Retorno Sobre o Investimento (ROI)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .image-container {
+      flex: 0 0 45%;
+      background-image: url('images/slide5_roi.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content-container {
+      flex: 1;
+      background-color: #1a365d;
+      color: #ffffff;
+      padding: 60px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .title {
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+      color: #ffffff;
+      border-left: 5px solid #22c55e;
+      padding-left: 20px;
+      margin-bottom: 40px;
+    }
+
+    .details {
+      margin-bottom: 30px;
+    }
+
+    .details p {
+      font-size: 20px;
+      margin: 8px 0;
+      color: #e2e8f0;
+      font-weight: 400;
+    }
+    
+    .details p strong {
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .roi-focus-area {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .roi-highlight {
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .roi-value {
+      font-size: 190px;
+      font-weight: 900;
+      color: #22c55e;
+      margin-right: 15px;
+    }
+
+    .roi-arrow svg {
+      width: 80px;
+      height: 80px;
+      fill: #22c55e;
+      margin-bottom: 35px;
+      animation: arrow-up 1.5s infinite ease-in-out;
+    }
+    
+    @keyframes arrow-up {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+
+    .roi-period {
+      font-size: 24px;
+      font-weight: 600;
+      color: #a0aec0;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      margin-top: -10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="image-container"></div>
+    <div class="content-container">
+      <h1 class="title">Métrica Financeira Chave:<br>Retorno Sobre o Investimento</h1>
+      
+      <div class="details">
+        <p><strong>Horizonte:</strong> 5 anos</p>
+        <p><strong>Benefícios Totais em 5 anos:</strong> R$ 19.075.000,00</p>
+      </div>
+
+      <div class="roi-focus-area">
+        <div class="roi-highlight">
+          <div class="roi-value">139%</div>
+          <div class="roi-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.542-1.271-.542-1.645 0l-9 13A1 1 0 0 0 3 19z"/>
+            </svg>
+          </div>
+        </div>
+        <p class="roi-period">Retorno em 5 anos</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

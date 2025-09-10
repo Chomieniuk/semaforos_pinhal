@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumário Executivo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 60px;
+      box-sizing: border-box;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #2d5a87;
+      margin: 0;
+    }
+    
+    .header .subtitle-bar {
+        width: 100px;
+        height: 5px;
+        background-color: #2d5a87;
+        margin: 15px auto 0 auto;
+        border-radius: 2.5px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .card {
+      flex: 1;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 6px solid;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(45, 90, 135, 0.15);
+    }
+
+    .card-desafio { border-color: #e53e3e; }
+    .card-solucao { border-color: #2d5a87; }
+    .card-resultados { border-color: #48bb78; }
+    .card-roi { border-color: #f6d55c; }
+
+    .card h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 25px 0;
+    }
+
+    .card-desafio h2 { color: #e53e3e; }
+    .card-solucao h2 { color: #2d5a87; }
+    .card-resultados h2 { color: #48bb78; }
+    .card-roi h2 { color: #f6d55c; }
+
+    .visual-element {
+      width: 100%;
+      height: 120px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card-content {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Visual Element: Desafio */
+    .circle-indicator {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #e53e3e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-weight: 700;
+      font-size: 36px;
+    }
+    .circle-indicator strong {
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.9;
+    }
+    
+    /* Visual Element: Solucao */
+    .connected-diagram {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .diagram-box {
+        width: 50px;
+        height: 50px;
+        background-color: #eaf0f6;
+        border: 2px solid #2d5a87;
+        color: #2d5a87;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .diagram-plus {
+        font-size: 24px;
+        color: #2d5a87;
+        font-weight: 300;
+    }
+
+    /* Visual Element: Resultados */
+    .progress-bars {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .progress-item {
+        text-align: left;
+        font-size: 14px;
+        color: #333;
+        font-weight: 600;
+    }
+    .progress-container {
+        width: 100%;
+        height: 20px;
+        background-color: #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .progress-fill {
+        height: 100%;
+        background-color: #48bb78;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 8px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* Visual Element: ROI */
+    .financial-chart {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 12px;
+        width: 100px;
+        height: 100px;
+    }
+    .chart-bar {
+        background-color: #f6d55c;
+        width: 20px;
+        border-radius: 4px 4px 0 0;
+        transition: height 0.5s ease-out;
+    }
+    .bar1 { height: 40%; }
+    .bar2 { height: 65%; }
+    .bar3 { height: 90%; }
+    
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1>Sumário Executivo: A Visão da Transformação</h1>
+      <div class="subtitle-bar"></div>
+    </div>
+    <div class="cards-container">
+      
+      <!-- Card 1: Desafio -->
+      <div class="card card-desafio">
+        <h2>Desafio</h2>
+        <div class="visual-element">
+          <div class="circle-indicator">
+            +300%
+            <strong>POPULAÇÃO</strong>
+          </div>
+        </div>
+        <p class="card-content">Aumento populacional superior a 300% durante o período de verão.</p>
+      </div>
+
+      <!-- Card 2: Solução -->
+      <div class="card card-solucao">
+        <h2>Solução</h2>
+        <div class="visual-element">
+          <div class="connected-diagram">
+            <div class="diagram-box">IA</div>
+            <div class="diagram-plus">+</div>
+            <div class="diagram-box">LED</div>
+            <div class="diagram-plus">+</div>
+            <div class="diagram-box">Web</div>
+          </div>
+        </div>
+        <p class="card-content">Plataforma integrada com Semáforos Inteligentes, IA e Placas de LED.</p>
+      </div>
+
+      <!-- Card 3: Resultados -->
+      <div class="card card-resultados">
+        <h2>Resultados</h2>
+        <div class="visual-element">
+          <div class="progress-bars">
+            <div class="progress-item">
+              <div>Congestionamentos</div>
+              <div class="progress-container">
+                <div class="progress-fill" style="width: 50%;">50%</div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div>Acidentes</div>
+              <div class="progress-container">
+                <div class="progress-fill" style="width: 40%;">40%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="card-content">Redução de 50% em congestionamentos e 40% no número de acidentes.</p>
+      </div>
+
+      <!-- Card 4: ROI -->
+      <div class="card card-roi">
+        <h2>ROI</h2>
+        <div class="visual-element">
+          <div class="financial-chart">
+            <div class="chart-bar bar1"></div>
+            <div class="chart-bar bar2"></div>
+            <div class="chart-bar bar3"></div>
+          </div>
+        </div>
+        <p class="card-content">Payback do investimento em aproximadamente 2 anos e ROI de 139% em 5 anos.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

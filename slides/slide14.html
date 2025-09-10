@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 14: Câmeras de Monitoramento com IA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #111;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #1a237e;
+      background-image: 
+        linear-gradient(rgba(26, 35, 126, 0.9), rgba(13, 20, 80, 0.95)),
+        url('images/aerial_view_smart_city_traffic_management_system.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #ffffff;
+      padding: 50px 70px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      text-align: left;
+      z-index: 2;
+    }
+
+    .slide-header h1 {
+      font-size: 48px;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .slide-header p {
+      font-size: 22px;
+      margin: 10px 0 0 0;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 800px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 35px;
+      margin-top: 40px;
+      padding-bottom: 50px; /* Space from footer */
+      z-index: 2;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 48px;
+      height: 48px;
+      fill: #4fc3f7; /* Light Blue for tech feel */
+    }
+    
+    .feature-text h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .feature-text p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer {
+      width: calc(100% - 140px); /* 100% - 2*padding */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+      position: absolute;
+      bottom: 50px;
+      z-index: 2;
+    }
+
+    /* --- Visual Effects --- */
+    .detection-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    @keyframes pulse-border {
+      0% { border-color: rgba(79, 195, 247, 0.5); }
+      50% { border-color: rgba(79, 195, 247, 1); }
+      100% { border-color: rgba(79, 195, 247, 0.5); }
+    }
+    
+    .detection-box {
+        position: absolute;
+        border: 2px solid rgba(79, 195, 247, 0.7);
+        box-sizing: border-box;
+        border-radius: 4px;
+        animation: pulse-border 2s infinite ease-in-out;
+    }
+
+    .box1 { top: 45%; left: 38%; width: 50px; height: 30px; animation-delay: 0s; }
+    .box2 { top: 60%; left: 55%; width: 80px; height: 40px; animation-delay: 0.5s; }
+    .box3 { top: 75%; left: 15%; width: 60px; height: 35px; animation-delay: 1s; }
+
+    @keyframes scan-line-anim {
+        0% { top: 20%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { top: 90%; opacity: 0; }
+    }
+
+    .scan-line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(79, 195, 247, 0.8), transparent);
+        box-shadow: 0 0 10px #4fc3f7;
+        animation: scan-line-anim 6s linear infinite;
+        animation-delay: 1s;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="slide">
+    
+    <div class="detection-overlay">
+        <div class="scan-line"></div>
+        <div class="detection-box box1"></div>
+        <div class="detection-box box2"></div>
+        <div class="detection-box box3"></div>
+    </div>
+    
+    <div class="slide-content-wrapper" style="display: flex; flex-direction: column; height: 100%; z-index: 2;">
+        <div class="slide-header">
+          <h1>Câmeras de Monitoramento com IA: Vigilância Inteligente</h1>
+          <p>Equipamentos com IA para detecção de incidentes, fiscalização e análise preditiva</p>
+        </div>
+
+        <div class="features-grid">
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M16.5,9A2.5,2.5 0 0,0 19,6.5A2.5,2.5 0 0,0 16.5,4A2.5,2.5 0 0,0 14,6.5A2.5,2.5 0 0,0 16.5,9M9,16.5A2.5,2.5 0 0,0 11.5,14A2.5,2.5 0 0,0 9,11.5A2.5,2.5 0 0,0 6.5,14A2.5,2.5 0 0,0 9,16.5M9,20A5.5,5.5 0 0,1 3.5,14.5A5.5,5.5 0 0,1 9,9A5.5,5.5 0 0,1 14.5,14.5L15.08,15.08C15.54,14.73 16,14.5 16.5,14.5A5.5,5.5 0 0,1 22,20H9M16.5,13C15.9,13 15.33,13.15 14.85,13.43L13.43,14.85C13.15,15.33 13,15.9 13,16.5V20H20.5C20.5,16.41 18.59,13 16.5,13Z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h3>Identificação de Padrões</h3>
+              <p>Reconhecimento automático de situações de risco e comportamentos anômalos.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/></svg>
+            </div>
+            <div class="feature-text">
+              <h3>Detecção de Incidentes</h3>
+              <p>Alertas instantâneos para acidentes, infrações e outras emergências.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M20,8H4V6H20M20,12H4V10H20M20,16H4V14H20M22,4H2A2,2 0 0,0 0,6V18A2,2 0 0,0 2,20H22A2,2 0 0,0 24,18V6A2,2 0 0,0 22,4Z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h3>Reconhecimento de Placas (LPR)</h3>
+              <p>Leitura automática de placas para controle de acesso, fiscalização e segurança.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M3.5,18.5L9.5,12.5L13.5,16.5L22,6.92L20.59,5.5L13.5,13.5L9.5,9.5L2,17L3.5,18.5Z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h3>Análise Preditiva</h3>
+              <p>Previsão de congestionamentos e otimização preventiva do fluxo de tráfego.</p>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    
+    <div class="footer">
+      <span>MiniMax Agent</span>
+      <span>Slide: 14</span>
+    </div>
+
+  </div>
+</body>
+</html>

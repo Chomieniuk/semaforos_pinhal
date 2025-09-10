@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 12: Semáforos Inteligentes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      box-sizing: border-box;
+      background-color: #1a237e;
+      background-image: linear-gradient(rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.95)), url('images/smart_city_aerial_view_network_technology_render.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 80px;
+    }
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-grow: 1;
+    }
+    .content-left {
+      flex-basis: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content-left h1 {
+      font-size: 52px;
+      font-weight: 900;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+    .content-left .subtitle {
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0 0 50px 0;
+      color: #B0BEC5;
+      max-width: 90%;
+    }
+    .tech-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tech-points li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+    .tech-points li svg {
+      flex-shrink: 0;
+      margin-right: 15px;
+      margin-top: 4px;
+    }
+    .tech-points strong {
+        color: #E3F2FD;
+    }
+    .content-right {
+      flex-basis: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .diagram-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .circle {
+      width: 130px;
+      height: 130px;
+      border: 2px solid #5C6BC0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      background-color: rgba(26, 35, 126, 0.5);
+      transition: all 0.3s ease;
+    }
+    .arrow {
+      font-size: 36px;
+      color: #7986CB;
+      margin: 5px 0;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 16px;
+      color: #B0BEC5;
+      flex-shrink: 0;
+    }
+    .footer .logo {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+    }
+     .footer .logo svg {
+        margin-right: 8px;
+     }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="main-content">
+      <div class="content-left">
+        <h1>Semáforos Inteligentes: Otimização em Tempo Real</h1>
+        <p class="subtitle">Dispositivos adaptativos com sensores e IA para ajustar ciclos dinamicamente</p>
+        <ul class="tech-points">
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C16.97 2 21 6.03 21 11C21 14.12 19.36 16.89 17 18.57V21.5C17 21.78 16.78 22 16.5 22H7.5C7.22 22 7 21.78 7 21.5V18.57C4.64 16.89 3 14.12 3 11C3 6.03 7.03 2 12 2ZM12 4C8.13 4 5 7.13 5 11C5 13.53 6.36 15.69 8.35 16.85C8.75 17.08 9 17.47 9 17.92V20H15V17.92C15 17.47 15.25 17.08 15.65 16.85C17.64 15.69 19 13.53 19 11C19 7.13 15.87 4 12 4ZM12 6C14.76 6 17 8.24 17 11C17 11.35 16.96 11.69 16.88 12H14.82C14.4 10.84 13.3 10 12 10C10.7 10 9.6 10.84 9.18 12H7.12C7.04 11.69 7 11.35 7 11C7 8.24 9.24 6 12 6Z" fill="#7986CB"/></svg>
+            <div><strong>Sensores Multimodais:</strong> Detecção de veículos, pedestres e ciclistas</div>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM16.24 16.24L11 13V7H12.5V12.25L17 14.93L16.24 16.24Z" fill="#7986CB"/></svg>
+            <div><strong>Processamento em Tempo Real:</strong> Análise instantânea do fluxo de tráfego</div>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 8H16V6H18V8ZM14 8H12V6H14V8ZM10 8H8V6H10V8ZM6 8H4V6H6V8ZM18 12H16V10H18V12ZM14 12H12V10H14V12ZM10 12H8V10H10V12ZM6 12H4V10H6V12ZM18 16H16V14H18V16ZM14 16H12V14H14V16ZM10 16H8V14H10V16ZM6 16H4V14H6V16ZM20 2H2V22H22V2H20ZM14.09 18H9.91L8.5 20H6V4H18V18H15.5L14.09 18Z" fill="#7986CB"/></svg>
+            <div><strong>Algoritmos de IA/ML:</strong> Otimização automática dos tempos de semáforo</div>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2C12.86 2 14.13 2.33 15.24 2.91L13.83 4.33C13.11 3.82 12.33 3.5 11.5 3.5C7.08 3.5 3.5 7.08 3.5 11.5C3.5 15.92 7.08 19.5 11.5 19.5C15.92 19.5 19.5 15.92 19.5 11.5C19.5 10.67 19.18 9.89 18.67 9.17L20.09 7.76C20.67 8.87 21 10.14 21 11.5ZM21.71 4.29L20.29 2.88L11.5 11.67L7.5 7.67L6.09 9.09L11.5 14.5L21.71 4.29Z" fill="#7986CB"/></svg>
+            <div><strong>Redução de Congestionamentos:</strong> Fluxo contínuo e eficiente</div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-right">
+        <div class="diagram-item">
+          <div class="circle">SENSORES</div>
+        </div>
+        <div class="arrow">&#x2193;</div>
+        <div class="diagram-item">
+          <div class="circle">PROCESSAMENTO</div>
+        </div>
+        <div class="arrow">&#x2193;</div>
+        <div class="diagram-item">
+          <div class="circle">IA</div>
+        </div>
+        <div class="arrow">&#x2193;</div>
+        <div class="diagram-item">
+          <div class="circle">OTIMIZAÇÃO</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" fill="#B0BEC5"/><path d="M20 12C20 14.2091 18.2091 16 16 16C13.7909 16 12 14.2091 12 12C12 9.79086 13.7909 8 16 8C18.2091 8 20 9.79086 20 12Z" fill="#1A237E"/><path d="M16 18C12.6863 18 10 20.6863 10 24H22C22 20.6863 19.3137 18 16 18Z" fill="#1A237E"/></svg>
+        MiniMax Agent
+      </div>
+      <span>Slide: 12</span>
+    </div>
+  </div>
+</body>
+</html>

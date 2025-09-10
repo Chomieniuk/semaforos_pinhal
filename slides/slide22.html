@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investimento Necessário</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .left-panel {
+      flex: 1.1;
+      padding: 60px 40px 40px 60px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      color: #1a365d;
+    }
+    .right-panel {
+      flex: 0.9;
+      background-color: #F0F5FA;
+      padding: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .left-panel h1 {
+      font-size: 38px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .left-panel h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #4a5568;
+      margin: 5px 0 0 0;
+    }
+    .investment-value-container {
+      margin-top: 40px;
+    }
+    .investment-value-container p {
+      font-size: 18px;
+      color: #4a5568;
+      margin: 0;
+    }
+    .investment-value {
+      display: flex;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 1.1;
+      margin-top: 10px;
+    }
+    .investment-value .currency {
+      font-size: 50px;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+    .intersections-info {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .intersections-info .bar {
+      width: 4px;
+      height: 60px;
+      background-color: #1a365d;
+      margin-right: 20px;
+    }
+    .intersections-info p {
+      font-size: 18px;
+      color: #4a5568;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 350px;
+    }
+    .footer-text {
+      margin-top: auto;
+      font-size: 13px;
+      color: #4a5568;
+    }
+    .right-panel img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      border: 1px solid #dde5ed;
+    }
+    .components-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a365d;
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+    }
+    .components-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .components-list li {
+      display: flex;
+      align-items: flex-start;
+      color: #4a5568;
+      font-size: 17px;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .components-list .bullet {
+      width: 10px;
+      height: 10px;
+      background-color: #1a365d;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="left-panel">
+      <div>
+        <h1>Investimento Necessário</h1>
+        <h2>Um Capital Estratégico para o Município</h2>
+        <div class="investment-value-container">
+          <p>Valor Total do Investimento</p>
+          <div class="investment-value">
+            <div class="currency">R$</div>
+            <div>7.982.035,00</div>
+          </div>
+        </div>
+        <div class="intersections-info">
+          <div class="bar"></div>
+          <p>14 interseções estratégicas serão modernizadas, aumentando a segurança e fluidez do trânsito.</p>
+        </div>
+      </div>
+      <p class="footer-text">Todos os custos são baseados em pesquisa de mercado detalhada e cotações atualizadas.</p>
+    </div>
+    <div class="right-panel">
+      <img src="images/slide2_investment.jpg" alt="Dashboard de custos do projeto">
+      <h3 class="components-title">Componentes Principais</h3>
+      <ul class="components-list">
+        <li>
+          <div class="bullet"></div>
+          <span>11 novos controladores semafóricos de última geração</span>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <span>46 postes e braços metálicos para sustentação</span>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <span>124 grupos focais veiculares com tecnologia LED</span>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <span>33 placas de sinalização com painéis de LED inteligentes</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
