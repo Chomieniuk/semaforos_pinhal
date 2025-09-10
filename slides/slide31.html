@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conclusão - Balneário Pinhal, o Futuro é Agora</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      display: flex;
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .content-container {
+      flex: 0 0 55%;
+      background-color: #1a365d;
+      color: #ffffff;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-container {
+      flex: 0 0 45%;
+      background-color: #1a365d;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+    
+    .content-container h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      color: #ffffff;
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    .title-decorator {
+        width: 100px;
+        height: 5px;
+        background-color: #22c55e;
+        margin-bottom: 30px;
+        animation: slideUp 0.8s ease-out;
+    }
+
+    .main-message {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #e2e8f0;
+      margin: 0 0 35px 0;
+      animation: slideUp 1s ease-out 0.2s;
+      animation-fill-mode: backwards;
+    }
+
+    .bullet-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+    }
+
+    .bullet-points li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #ffffff;
+      animation: slideUp 1s ease-out 0.4s;
+      animation-fill-mode: backwards;
+    }
+    
+    .bullet-points li:nth-child(2) { animation-delay: 0.6s; }
+    .bullet-points li:nth-child(3) { animation-delay: 0.8s; }
+    .bullet-points li:nth-child(4) { animation-delay: 1.0s; }
+
+
+    .bullet-icon {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-top: 9px;
+    }
+
+    .call-to-action {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.6;
+      margin: 0;
+      color: #ffffff;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      border-left: 5px solid #22c55e;
+      animation: slideUp 1s ease-out 1.2s;
+      animation-fill-mode: backwards;
+    }
+    
+    .call-to-action strong {
+        color: #22c55e;
+        font-weight: 700;
+    }
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="content-container">
+      <h1>Conclusão: O Futuro é Agora</h1>
+      <div class="title-decorator"></div>
+      <p class="main-message">Este projeto representa uma decisão estratégica e um investimento comprovadamente rentável para o desenvolvimento sustentável de Balneário Pinhal.</p>
+      <ul class="bullet-points">
+        <li>
+          <div class="bullet-icon"></div>
+          <p>A solução inteligente é essencial para superar os desafios atuais e futuros.</p>
+        </li>
+        <li>
+          <div class="bullet-icon"></div>
+          <p>Gera benefícios sociais, ambientais e econômicos substanciais para a comunidade.</p>
+        </li>
+        <li>
+          <div class="bullet-icon"></div>
+          <p>Oferece retorno financeiro atrativo, com payback rápido e um alto Retorno Sobre o Investimento (ROI).</p>
+        </li>
+      </ul>
+      <p class="call-to-action">Convidamos a Prefeitura Municipal a ser <strong>parceira fundamental</strong> nesta transformação.</p>
+    </div>
+    <div class="image-container">
+      <img src="images/slide10_conclusion.jpg" alt="Visão futurista de Balneário Pinhal com tecnologia e sustentabilidade">
+    </div>
+  </div>
+
+</body>
+</html>

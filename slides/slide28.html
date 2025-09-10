@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma de Implementação</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-size: 42px;
+      color: #1a365d;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+    }
+
+    .header p {
+      font-size: 20px;
+      color: #4a5568;
+      margin: 0;
+    }
+
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .timeline-row {
+      display: flex;
+      width: 100%;
+    }
+
+    .timeline-main {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .timeline-line {
+      height: 6px;
+      background-color: #1a365d;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .timeline-marker {
+        width: 24px;
+        height: 24px;
+        background-color: #ffffff;
+        border: 5px solid #1a365d;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    .phase-card {
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f7fafc;
+      border-top: 5px solid #1a365d;
+      text-align: center;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: popIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .phase-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a365d;
+      margin: 0 0 5px 0;
+    }
+    
+    .phase-card .duration {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a365d;
+      margin-bottom: 8px;
+    }
+    
+    .phase-card p {
+      font-size: 14px;
+      color: #4a5568;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .phase-spacer {
+      min-height: 150px;
+      padding: 15px;
+    }
+    
+    .top-row {
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    
+    .bottom-row {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .phase-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .phase-1 { flex-basis: 20%; animation-delay: 0.2s; } /* 3/15 */
+    .phase-2 { flex-basis: 26.67%; animation-delay: 0.4s; } /* 4/15 */
+    .phase-3 { flex-basis: 40%; animation-delay: 0.6s; } /* 6/15 */
+    .phase-4 { flex-basis: 13.33%; animation-delay: 0.8s; } /* 2/15 */
+
+    @keyframes popIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="header">
+      <h1>Cronograma de Implementação</h1>
+      <p>Um Roteiro Claro para o Futuro Municipal - Duração Total: 15 meses</p>
+    </div>
+
+    <div class="timeline-container">
+      
+      <!-- Linha Superior de Fases -->
+      <div class="timeline-row top-row">
+        <div class="phase-card phase-1">
+          <h3>Fase 1: Planejamento</h3>
+          <div class="duration">(3 meses)</div>
+          <p>Garantia da viabilidade financeira e técnica do projeto.</p>
+        </div>
+        <div class="phase-spacer phase-2"></div>
+        <div class="phase-card phase-3">
+          <h3>Fase 3: Implantação</h3>
+          <div class="duration">(6 meses)</div>
+          <p>Expansão do sistema para Av. Itália e Rua Alegrete.</p>
+        </div>
+        <div class="phase-spacer phase-4"></div>
+      </div>
+      
+      <!-- Linha do Tempo Central -->
+      <div class="timeline-main">
+        <div class="timeline-line">
+           <div class="phase-wrapper" style="flex-basis: 20%;"> <div class="timeline-marker"></div> </div>
+           <div class="phase-wrapper" style="flex-basis: 26.67%;"> <div class="timeline-marker"></div> </div>
+           <div class="phase-wrapper" style="flex-basis: 40%;"> <div class="timeline-marker"></div> </div>
+           <div class="phase-wrapper" style="flex-basis: 13.33%;"> <div class="timeline-marker"></div> </div>
+        </div>
+      </div>
+      
+      <!-- Linha Inferior de Fases -->
+      <div class="timeline-row bottom-row">
+        <div class="phase-spacer phase-1"></div>
+        <div class="phase-card phase-2">
+          <h3>Fase 2: Desenvolvimento</h3>
+          <div class="duration">(4 meses)</div>
+          <p>Instalação e validação dos testes piloto na RS-040.</p>
+        </div>
+        <div class="phase-spacer phase-3"></div>
+        <div class="phase-card phase-4">
+          <h3>Fase 4: Avaliação</h3>
+          <div class="duration">(2 meses)</div>
+          <p>Análise de resultados e garantia de sustentabilidade.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
